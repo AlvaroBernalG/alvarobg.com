@@ -1,0 +1,14 @@
+# humanstxt.org/
+# The humans responsible & technology colophon
+
+# TEAM
+
+  Alvaro Bernal Gimeno
+
+# THANKS
+
+  Google web starter kit team 
+
+# TECHNOLOGY COLOPHON
+
+  HTML5, CSS3

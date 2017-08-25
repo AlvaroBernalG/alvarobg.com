@@ -1,0 +1,27 @@
+{
+  "name": "alvarobg.com",
+  "version": "1.0.0",
+  "description": "My personal landing page",
+  "main": "index.js",
+  "scripts": {
+    "start": "./node_modules/live-server/live-server.js --open=app "
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/alvarobernalg/alvarobg.com.git"
+  },
+  "keywords": [
+    "alvaro",
+    "landing",
+    "page"
+  ],
+  "author": "Alvaro Bernal Gimeno",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/alvarobernalg/alvarobg.com/issues"
+  },
+  "homepage": "https://github.com/alvarobernalg/alvarobg.com#readme",
+  "dependencies": {
+    "live-server": "^1.2.0"
+  }
+}
