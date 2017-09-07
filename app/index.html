@@ -11,9 +11,11 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <link rel="icon" type="image/png" href="favicon.png" />
   <link href="https://fonts.googleapis.com/css?family=Athiti" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css?family=Gilda+Display" rel="stylesheet">
+
 </head>
 
-<body>
+<body class="center">
   <style>
     main,
     body,
@@ -25,18 +27,31 @@
 
     main,body,html{
       height: 100%;
+			box-sizing: border-box;
     }
 
     body {
-      padding: 20px;
+
       margin: 0px;
       box-sizing: border-box;
       width: 100%;
-      font-size: 2.8em;
+      font-size: 40px;
       line-height: 1.1;
-      background: #ffffff;
+      background: #f5f9fd;
       color:#4a4747;
       font-family: 'Athiti', sans-serif;
+    }
+
+    main{
+      position: relative;
+      padding: 15px;
+      margin: 15px;
+      width: 1000px;
+      max-height: 700px;
+      background:white;
+      /* border-radius: 5px; */
+      box-shadow: 1px 1px 30px #e3ecf5;
+      border-left: 10px solid rgba(224, 74, 74, 0.28);
     }
 
     .center{
@@ -60,13 +75,15 @@
     }
 
     .content-wrapper {
-      display: flex;
-      flex-wrap: wrap;
-      justify-content: center;
+			display: flex;
+			flex-wrap: wrap;
+			justify-content: center;
+			background: white;
+				
     }
 
     .symbol {
-      font-size: 130px;
+      font-size: 3em;
       margin-right: 10px;
       color: #e04a4a;
     }
@@ -87,9 +104,36 @@
         display: none;
       }
     }
+    .lines{
+      background: #fff5f5;
+      height: 100%;
+      width: 30%;
+      z-index: -1;
+      position: absolute;
+      left: 0px;
+    }
+
+    .lines1{
+      position: absolute;
+      background: #fff5f5;;
+      height: 100%;
+      width: 50px;
+      left: 0;
+      top: 0;
+      opacity: 0.5;
+    }
+    .background{
+      height: 100%;
+    }
+
   </style>
+  <div class='background'>
+    <div class='lines'></div>
+  </div>
+
   <main class="center">
     <div class="content-wrapper">
+    <div class='lines1'></div>
       <div class="symbol">
         &#x0F06;
       </div>
