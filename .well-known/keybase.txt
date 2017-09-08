@@ -1,0 +1,55 @@
+==================================================================
+https://keybase.io/alvarob
+--------------------------------------------------------------------
+
+I hereby claim:
+
+  * I am an admin of https://alvarobg.com
+  * I am alvarob (https://keybase.io/alvarob) on keybase.
+  * I have a public key ASBGtnfuAkl584aaXM7Hw4-dLJYCYL1vNVv3rZvSSxiRGwo
+
+To do so, I am signing this object:
+
+{
+  "body": {
+    "key": {
+      "eldest_kid": "0101ff7746466b3dbd3d16905466d9c765981580c6deb06d150e7272a4d1ec5298c60a",
+      "host": "keybase.io",
+      "kid": "012046b677ee024979f3869a5ccec7c38f9d2c960260bd6f355bf7ad9bd24b18911b0a",
+      "uid": "25dff2b61ec506226db465dca1b79519",
+      "username": "alvarob"
+    },
+    "merkle_root": {
+      "ctime": 1504888053,
+      "hash": "85e47b620e27a7936675a66234a3561825c706130973a9a302c62d17f841d4ef62de5e69b0a7ea5fb0524075ad590c4695a467ca888833c34293d57a4ee9de46",
+      "hash_meta": "a95f3af20ae4d6a2c5a61a98bb95c4a7ee0310202f3400d5ec1e77933ed108ab",
+      "seqno": 1375371
+    },
+    "service": {
+      "hostname": "alvarobg.com",
+      "protocol": "https:"
+    },
+    "type": "web_service_binding",
+    "version": 1
+  },
+  "client": {
+    "name": "keybase.io go client",
+    "version": "1.0.29"
+  },
+  "ctime": 1504888069,
+  "expire_in": 504576000,
+  "prev": "56de81b6e16ddac6d87f6fafcf98a65b1126bb19a334f2dea912d89451256146",
+  "seqno": 24,
+  "tag": "signature"
+}
+
+which yields the signature:
+
+hKRib2R5hqhkZXRhY2hlZMOpaGFzaF90eXBlCqNrZXnEIwEgRrZ37gJJefOGmlzOx8OPnSyWAmC9bzVb962b0ksYkRsKp3BheWxvYWTFA0R7ImJvZHkiOnsia2V5Ijp7ImVsZGVzdF9raWQiOiIwMTAxZmY3NzQ2NDY2YjNkYmQzZDE2OTA1NDY2ZDljNzY1OTgxNTgwYzZkZWIwNmQxNTBlNzI3MmE0ZDFlYzUyOThjNjBhIiwiaG9zdCI6ImtleWJhc2UuaW8iLCJraWQiOiIwMTIwNDZiNjc3ZWUwMjQ5NzlmMzg2OWE1Y2NlYzdjMzhmOWQyYzk2MDI2MGJkNmYzNTViZjdhZDliZDI0YjE4OTExYjBhIiwidWlkIjoiMjVkZmYyYjYxZWM1MDYyMjZkYjQ2NWRjYTFiNzk1MTkiLCJ1c2VybmFtZSI6ImFsdmFyb2IifSwibWVya2xlX3Jvb3QiOnsiY3RpbWUiOjE1MDQ4ODgwNTMsImhhc2giOiI4NWU0N2I2MjBlMjdhNzkzNjY3NWE2NjIzNGEzNTYxODI1YzcwNjEzMDk3M2E5YTMwMmM2MmQxN2Y4NDFkNGVmNjJkZTVlNjliMGE3ZWE1ZmIwNTI0MDc1YWQ1OTBjNDY5NWE0NjdjYTg4ODgzM2MzNDI5M2Q1N2E0ZWU5ZGU0NiIsImhhc2hfbWV0YSI6ImE5NWYzYWYyMGFlNGQ2YTJjNWE2MWE5OGJiOTVjNGE3ZWUwMzEwMjAyZjM0MDBkNWVjMWU3NzkzM2VkMTA4YWIiLCJzZXFubyI6MTM3NTM3MX0sInNlcnZpY2UiOnsiaG9zdG5hbWUiOiJhbHZhcm9iZy5jb20iLCJwcm90b2NvbCI6Imh0dHBzOiJ9LCJ0eXBlIjoid2ViX3NlcnZpY2VfYmluZGluZyIsInZlcnNpb24iOjF9LCJjbGllbnQiOnsibmFtZSI6ImtleWJhc2UuaW8gZ28gY2xpZW50IiwidmVyc2lvbiI6IjEuMC4yOSJ9LCJjdGltZSI6MTUwNDg4ODA2OSwiZXhwaXJlX2luIjo1MDQ1NzYwMDAsInByZXYiOiI1NmRlODFiNmUxNmRkYWM2ZDg3ZjZmYWZjZjk4YTY1YjExMjZiYjE5YTMzNGYyZGVhOTEyZDg5NDUxMjU2MTQ2Iiwic2Vxbm8iOjI0LCJ0YWciOiJzaWduYXR1cmUifaNzaWfEQD38IdsyTu09XAp1B0/J3cLji97Bt84CwTLURMJdo3Hevq5JpL4z3fIWYHbmgwGpkDxbgeSMiHwzH2WuQ1FMMwKoc2lnX3R5cGUgpGhhc2iCpHR5cGUIpXZhbHVlxCDOo98d7KHCldW3WKo02y8DXl3j31pOpBBDpuaC9GADKaN0YWfNAgKndmVyc2lvbgE=
+
+And finally, I am proving ownership of this host by posting or
+appending to this document.
+
+View my publicly-auditable identity here: https://keybase.io/alvarob
+
+==================================================================
