@@ -31,10 +31,9 @@
     }
 
     body {
-
+      width: 100%;
       margin: 0px;
       box-sizing: border-box;
-      width: 100%;
       font-size: 40px;
       line-height: 1.1;
       background: #f5f9fd;
@@ -43,13 +42,13 @@
     }
 
     main{
+      position: relative;
       display: flex;
       flex-direction: column;
-      position: relative;
-      padding: 15px;
-      margin: 15px;
       width: 1000px;
       max-height: 600px;
+      padding: 15px;
+      margin: 15px;
       background:white;
       box-shadow:0 1.44rem 2.88rem -0.63rem hsla(0,0%,5%,.1), 0 0.75rem 0.94rem -0.63rem rgba(0,0,0,.07);
     }
@@ -108,6 +107,7 @@
       .symbol {
         display: none;
       }
+
       main{
         padding: 0px;
         margin: 0px;
@@ -121,10 +121,10 @@
 
     .icons{
       display: flex;
-      justify-content: center;
-      align-items: center;
       width: 100%;
       height: 100px;
+      justify-content: center;
+      align-items: center;
     }
 
     .icons svg{
@@ -139,41 +139,40 @@
       fill:#c6c6e0;
     }
 
-    .lines{
-
-      background: radial-gradient(34em at 100% 50%,#fb6ca1,#e80055);
+    .teardrop{
       height: 100vh;
       width: 30%;
+      height: 100%;
       left: 0px;
+      background: radial-gradient(34em at 100% 50%,#fb6ca1,#e80055);
       transform: translateY(-100vh);
       transition: all 1000ms cubic-bezier(0.7, 0.07, 0.96, 0.71);
     }
 
 		.rain{
-      height: 100%;
       transform: translateY(0);
 		}
 
     .background{
 
-      width: 30%;
-      z-index: -1;
-      display: flex;
       position: absolute;
       left: 0;
+      display: flex;
+      width: 30%;
+      z-index: -1;
     }
 
   </style> 
 
   <div class='background'>
-    <div class='lines'></div>
-    <div class='lines'></div>
-    <div class='lines'></div>
-    <div class='lines'></div>
-    <div class='lines'></div>
-    <div class='lines'></div>
-    <div class='lines'></div>
-    <div class='lines'></div>
+    <div class='teardrop'></div>
+    <div class='teardrop'></div>
+    <div class='teardrop'></div>
+    <div class='teardrop'></div>
+    <div class='teardrop'></div>
+    <div class='teardrop'></div>
+    <div class='teardrop'></div>
+    <div class='teardrop'></div>
   </div>
 
   <main class="center">
@@ -206,40 +205,42 @@
     </div>
   </main>
 
-  <script>
+  <script async>
 
     // Helper functions
-		const $ = (selector) => document.querySelector(selector)
 
-		const $$ = (selector) => Array.from(document.querySelectorAll(selector))
+    const $ = (selector) => document.querySelector(selector)
 
-		const wait = (ms) => new Promise(resolve => setTimeout(resolve, ms))
+    const $$ = (selector) => Array.from(document.querySelectorAll(selector))
 
-    const random = (ms) => Math.ceil((Math.random() * 1) * ms )
+    const wait = (ms) => new Promise(resolve => setTimeout(resolve, ms))
+
+    const random = (until) => Math.ceil((Math.random() * 1) * until)
 
     const range = (from, to) => (new Array(to - from)).fill(0).map((el, i) => i + from)
 
     const transition = (ms) => `all ${ms}ms cubic-bezier(0.49,-0.04, 0.33, 0.74);`
 
-		document.addEventListener("DOMContentLoaded", async ()=>{
+//End Helper functions
+    document.addEventListener("DOMContentLoaded", async ()=>{
 
-			const rainBackground = $('.background')
+    const rainBackground = $('.background')
 
-			const lines = $$('.background .lines')
+    const teardrops = $$('.background .teardrop')
 
-      lines.forEach(async (line, index) =>{
+      teardrops.forEach(async (teardrop, index) =>{
 
-        line.style.transition = transition(random(1000))
-        
+        teardrop.style.transition = transition(random(1000))
+
         await wait(random(1000))
 
-        line.classList.add('rain')
+        teardrop.classList.add('rain')
 
         return line
       })
-		})
 
-  </script>
+    })
+</script>
 
   <script>
     (function (i, s, o, g, r, a, m) {
