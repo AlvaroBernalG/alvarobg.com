@@ -1,6 +1,5 @@
 
 const CACHE = 'cache-and-udpate'
-const TROLL_CACHE = 'troll'
 
 const RESOURCES = ['./', '//fonts.googleapis.com/css?family=Athiti']
 
@@ -10,7 +9,6 @@ self.addEventListener('install', (evt)=>{
 })
 
 self.addEventListener('fetch', (event) =>{
-  console.log('fetch method was fired', event)
   event.respondWith(fromCache(event.request))
   event.waitUntil(precache())
 })
