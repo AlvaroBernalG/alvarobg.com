@@ -9,8 +9,15 @@ self.addEventListener('install', (evt)=>{
 })
 
 self.addEventListener('fetch', (event) =>{
+  console.log('fetching url', event.request.url);
+
+  const { url } = event.request
+
+  RESOURCES.includes(url) === false && RESOURCES.push(url)
+
   event.respondWith(fromCache(event.request))
   event.waitUntil(precache())
+
 })
 
 async function precache(){
