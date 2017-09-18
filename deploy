@@ -5,7 +5,7 @@ echo "Deploying site ..."
 changes=`git diff`
 
 if [ ! -z "$changes" ]; then
-  echo "You need to push the changes into the repo before proceeding."
+  echo "You need to commit the changes before proceeding. "
   exit
 fi
 
