@@ -4,7 +4,7 @@
   "description": "My personal landing page",
   "main": "index.js",
   "scripts": {
-    "start": "./node_modules/live-server/live-server.js --open=app "
+    "start": "./node_modules/live-server/live-server.js --path=app "
   },
   "repository": {
     "type": "git",
