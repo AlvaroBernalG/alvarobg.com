@@ -1,10 +1,10 @@
 {
   "name": "alvarobg.com",
-  "version": "1.0.0",
+  "version": "1.0.1",
   "description": "My personal landing page",
   "main": "index.js",
   "scripts": {
-    "start": "./node_modules/live-server/live-server.js --path=app "
+    "start": "cd ./app && live-server "
   },
   "repository": {
     "type": "git",
