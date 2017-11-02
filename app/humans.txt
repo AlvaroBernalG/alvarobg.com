@@ -6,8 +6,12 @@
   Alvaro Bernal Gimeno
 
 # THANKS
+   Google web starter kit team 
 
-  Google web starter kit team 
+  For Mozilla documentation :
+   bugspencer, chrisdavidmills, chaser, marcoscaceres, robertknight, isonic,
+   jonasmattisson, nblackburn, teoli, Dietrich, jpmedley, samthor, PikadudeNo1,
+   anssiko, franciov, henrikrossen, mvano, maqthen, nyx2014
 
 # TECHNOLOGY COLOPHON
 
