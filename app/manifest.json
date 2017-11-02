@@ -1,6 +1,11 @@
 {
-  "name": "Alvaro Bernal introduction page",
-  "short_name": "ABG_Site",
+  "name": "Alvaro Bernal Gimeno landing page",
+  "short_name": "Alvaro Bernal Gimeno landing page.",
+  "description": "Alvaro Bernal Gimeno landing page.",
+  "start_url": "/index.html?homescreen=1",
+  "display": "standalone",
+  "background_color": "#f5f9fd",
+  "theme_color": "#f5f9fd",
   "icons": [{
         "src": "images/ss_128.png",
         "sizes": "128x128",
@@ -13,9 +18,5 @@
         "src": "images/ss_192.png",
         "sizes": "192x192",
         "type": "image/png"
-      }],
-  "start_url": "/index.html?homescreen=1",
-  "display": "standalone",
-  "background_color": "#ffffff",
-  "theme_color": "#ffffff"
+      }]
 }
