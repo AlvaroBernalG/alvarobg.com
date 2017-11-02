@@ -8,7 +8,7 @@
 # THANKS
    Google web starter kit team 
 
-  For Mozilla documentation :
+  For the awesome Mozilla documentation :
    bugspencer, chrisdavidmills, chaser, marcoscaceres, robertknight, isonic,
    jonasmattisson, nblackburn, teoli, Dietrich, jpmedley, samthor, PikadudeNo1,
    anssiko, franciov, henrikrossen, mvano, maqthen, nyx2014
