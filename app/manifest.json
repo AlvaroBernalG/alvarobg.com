@@ -1,8 +1,8 @@
 {
   "name": "Alvaro Bernal Gimeno landing page",
-  "short_name": "Alvaro Bernal Gimeno landing page.",
+  "short_name": "Alvaro B.",
   "description": "Alvaro Bernal Gimeno landing page.",
-  "start_url": "/index.html?homescreen=1",
+  "start_url": "/index.html",
   "display": "standalone",
   "background_color": "#f5f9fd",
   "theme_color": "#f5f9fd",
