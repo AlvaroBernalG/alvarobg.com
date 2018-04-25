@@ -1,44 +1,38 @@
+const CACHE = 'v1'
 
-const CACHE = 'cache-and-udpate'
+const RESOURCES = [ 
+  'http://127.0.0.1:8080/',
+  '/index.html', 
+  '/favicon.png', 
+  '//fonts.googleapis.com/css?family=Athiti',
+  'https://fonts.gstatic.com/s/athiti/v2/pe0vMISdLIZIv1wICxJXKNWyAw.woff2'
+]
 
-const RESOURCES = ['./', '//fonts.googleapis.com/css?family=Athiti']
-
-self.addEventListener('install', (evt)=>{
+self.addEventListener('install', (evt) => {
   console.log('service worker installed')
-  evt.waitUntil(precache())
 })
 
-self.addEventListener('fetch', (event) =>{
-  console.log('fetching url', event.request.url);
+self.addEventListener('fetch', async (event) => {
 
-  const { url } = event.request
+  console.log('[Fetching] => ', event.request.url);
 
-  RESOURCES.includes(url) === false && RESOURCES.push(url)
+  event.respondWith(caches.match(event.request).then((response) => {
 
-  event.respondWith(fromCache(event.request))
-  event.waitUntil(precache())
+    if (response !== undefined) return response
+
+    return fetch(event.request).then(response => {
+
+      const responseClose = response.clone()
+
+      caches.open(CACHE).then( cache => {
+        cache.put(event.request, responseClose)
+      })
+
+      return response
+
+    }).catch(console.log)
+
+  }))
 
 })
-
-async function precache(){
-   const mainCache = await caches.open(CACHE)
-   return mainCache.addAll(RESOURCES)
-}
-
-async function fromCache(request){
-   const cache = await caches.open(CACHE)
-   const matching = await cache.match(request)
-  if (matching) {
-    return matching
-  }else{
-    console.log('error', request);
-    return Promise.reject('no-match')
-  }
-}
-
-async function update(request){
-   const cache = await caches.open(CACHE)
-   const response = await fetch(request)
-   return cache.put(request, response)
-}
 
