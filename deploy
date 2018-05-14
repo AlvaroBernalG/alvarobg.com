@@ -14,4 +14,7 @@ keybase fs cp app/index.html /keybase/public/alvarob/index.html
 
 aws s3 sync app s3://alvarobg.com --acl public-read
 
+aws cloudfront create-invalidation --distribution-id $ALVAROBGWEB_DISTRO_ID \
+  --paths "/*"
+
 echo "Done."
