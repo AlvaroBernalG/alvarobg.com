@@ -8,7 +8,9 @@ const resources = {
     'https://alvarobg.com/',
     'https://alvarobg.com',
     'http://127.0.0.1:8080'
-  ]
+  ],
+  fonts: ['https://fonts.googleapis.com/css?family=Athiti'],
+  css: ['favicon.png']
 }
 
 self.addEventListener('install', evt => {
