@@ -1,38 +1,53 @@
-const CACHE = 'v1'
+const CACHE = 'v0.0.5'
 
-const RESOURCES = [ 
-  'http://127.0.0.1:8080/',
-  '/index.html', 
-  '/favicon.png', 
-  '//fonts.googleapis.com/css?family=Athiti',
-  'https://fonts.gstatic.com/s/athiti/v2/pe0vMISdLIZIv1wICxJXKNWyAw.woff2'
-]
+const resources = {
+  offline: 'offline.html',
+  home: [
+    '/',
+    'http://localhost:8080/',
+    'https://alvarobg.com/',
+    'http://127.0.0.1:8080'
+  ]
+}
 
-self.addEventListener('install', (evt) => {
+self.addEventListener('install', evt => {
   console.log('service worker installed')
-})
 
-self.addEventListener('fetch', async (event) => {
+  const offlineURL = new URL(self.location.origin)
+  offlineURL.pathname = resources.offline
 
-  console.log('[Fetching] => ', event.request.url);
+  evt.waitUntil(
+    fetch(offlineURL).then(response => {
+      caches.open(CACHE).then(cache => {
+        cache.put(resources.offline, response)
 
-  event.respondWith(caches.match(event.request).then((response) => {
-
-    if (response !== undefined) return response
-
-    return fetch(event.request).then(response => {
-
-      const responseClose = response.clone()
-
-      caches.open(CACHE).then( cache => {
-        cache.put(event.request, responseClose)
+        console.log('offline page installed.')
       })
-
-      return response
-
-    }).catch(console.log)
-
-  }))
-
+    })
+  )
 })
 
+self.addEventListener('fetch', event => {
+  event.respondWith(
+    (async function (evt) {
+      const { url } = evt.request
+
+      console.log(`[Fetching] => ${url}`, evt.request)
+
+      const cache = await caches.open(CACHE)
+
+      if (resources.home.includes(url) && navigator.onLine === false) {
+        return await cache.match(resources.offline)
+      }
+
+      const cachedResponse = await cache.match(evt.request)
+
+      if (cachedResponse) return cachedResponse
+
+      return fetch(evt.request).then(response => {
+        cache.put(evt.request, response)
+        return response
+      })
+    })(event)
+  )
+})
