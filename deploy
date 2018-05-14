@@ -9,11 +9,14 @@ if [ ! -z "$changes" ]; then
   exit
 fi
 
+echo 'deploying into keybase ...'
 keybase fs rm /keybase/public/alvarob/index.html
 keybase fs cp app/index.html /keybase/public/alvarob/index.html
 
+echo 'deploying contents to S3  ...'
 aws s3 sync app s3://alvarobg.com --acl public-read
 
+echo 'Invalidating cloudfront cache ...'
 aws cloudfront create-invalidation --distribution-id $ALVAROBGWEB_DISTRO_ID \
   --paths "/*"
 
