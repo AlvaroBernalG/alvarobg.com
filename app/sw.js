@@ -1,4 +1,4 @@
-const CACHE = 'v0.0.7'
+const CACHE = 'v0.0.9'
 
 const resources = {
   offline: 'offline.html',
