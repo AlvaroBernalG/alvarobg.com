@@ -54,3 +54,28 @@ self.addEventListener('fetch', event => {
     })(event)
   )
 })
+
+      const cachedResponse = await cache.match(evt.request)
+
+      if (cachedResponse) return cachedResponse
+
+      return fetch(evt.request)
+        .then(response => {
+          cache.put(evt.request, response)
+          return response
+        })
+        .catch(console.log)
+    })(event)
+  )
+})
+
+self.addEventListener('activate', event => {
+  console.log('the activate event has been fired.')
+  event.waitUntil(
+    caches.keys().then(async dbs => {
+      dbs.forEach(db => {
+        if (db !== CACHE) caches.delete(db)
+      })
+    })
+  )
+})
