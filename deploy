@@ -17,7 +17,8 @@ echo "deploying contents to S3  ..."
 aws s3 sync app s3://alvarobg.com --acl public-read
 
 echo "Invalidating cloudfront cache ..."
-aws cloudfront create-invalidation --distribution-id "$ALVAROBGWEB_DISTRO_ID" \
---paths "/*"
+aws cloudfront \
+  create-invalidation --distribution-id "$ALVAROBGWEB_DISTRO_ID" \
+  --paths "/*"
 
 echo "Done."
