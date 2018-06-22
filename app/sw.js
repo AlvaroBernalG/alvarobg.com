@@ -1,4 +1,4 @@
-const CACHE = 'v0.2.9'
+const CACHE = 'v0.3.0'
 
 const resources = {
   offline: ['offline.html', '/images/favicon_offline.png'],
